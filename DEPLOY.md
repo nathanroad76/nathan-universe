@@ -2,6 +2,7 @@
 
 > 目标：把本项目（Nathan's Universe · 太阳系 3D 交互网页）发布到公网。
 > 方案：代码托管到 **GitHub**，用腾讯云 **EdgeOne Pages** 做静态托管 + 自动部署。
+> 仓库：<https://github.com/nathanroad76/nathan-universe>（public，默认分支 `main`）
 > 本手册由会话中逐步执行并更新；控制台按钮文案以实际界面为准。
 
 ---
@@ -15,33 +16,18 @@
 已完成：
 - [x] 本地 git 仓库初始化（分支 `main`）
 - [x] `.gitignore`（排除 node_modules / 日志 / 编辑器文件）
-- [x] 21 个文件已暂存（无 node_modules / 无用大文件）
+- [x] 22 个文件已提交（含 DEPLOY.md，无 node_modules）
 - [x] 资源体量约 9 MB（主要为行星贴图），满足静态托管限制
 
 ---
 
-## 阶段 1：推送代码到 GitHub（需要你授权/操作）
+## 阶段 1：推送代码到 GitHub（✅ 已完成 2025 会话）
 
-1. **创建 GitHub 仓库**（在浏览器登录 GitHub → New repository）：
-   - 名称示例：`nathans-universe`；可见性：Private 或 Public 均可；
-   - **不要**勾选 “Add README / .gitignore / license”（本地已有，避免冲突）。
-2. **把本地代码推送到该仓库**（三选一，见「阶段 1 附录」）。
-3. 推送后确认 GitHub 上能浏览到 `index.html / js / css / assets / lib`。
-
-### 阶段 1 附录：推送方式
-- **方式 A（网页手动，最简单）**：在仓库页 “Add file → Upload files”，把除 `.git` 外的整个目录拖入上传 → Commit。
-- **方式 B（本环境 git + token）**：用户提供 GitHub Personal Access Token（classic，勾选 `repo` 权限），执行：
-  ```bash
-  cd 太阳系前端网页
-  git config user.name "<GitHub用户名>"
-  git config user.email "<GitHub邮箱或 user@users.noreply.github.com>"
-  git commit -m "feat: Nathan's Universe 初始版本"
-  git remote add origin https://<用户名>:<TOKEN>@github.com/<用户名>/nathans-universe.git
-  git push -u origin main
-  ```
-- **方式 C（gh CLI）**：安装并 `gh auth login` 后执行 `gh repo create nathans-universe --public --source . --push`。
-
-> ⚠️ Token 仅作推送用，权限越少越好；推送后请改密/删除。
+- [x] 仓库 `nathanroad76/nathan-universe` 已存在（public）
+- [x] 本地身份：`git config user.name/email` = `nathanroad76`
+- [x] 首次提交 `967acb3 feat: Nathan's Universe 初始版本上线`
+- [x] 通过 HTTPS + Personal Access Token 推送成功（token 已写入本地 `.git/config` 的 remote URL）
+- [ ] ⚠️ 后续建议：token 用完可撤销/轮换；长期可改用 gh CLI 或 SSH 密钥（见「阶段 5」）。
 
 ---
 
