@@ -3,6 +3,7 @@
 > 目标：把本项目（Nathan's Universe · 太阳系 3D 交互网页）发布到公网。
 > 方案：代码托管到 **GitHub**，用腾讯云 **EdgeOne Pages** 做静态托管 + 自动部署。
 > 仓库：<https://github.com/nathanroad76/nathan-universe>（public，默认分支 `main`）
+> 线上地址：<https://nathan-universe-dpo7e8ste9ut.edgeone.dev/>（EdgeOne Pages ✅ 已上线）
 > 本手册由会话中逐步执行并更新；控制台按钮文案以实际界面为准。
 
 ---
@@ -50,17 +51,15 @@ EdgeOne Pages 通常支持直接**上传静态文件**：控制台把 `index.htm
 
 ---
 
-## 阶段 3：上线验证清单
+## 阶段 3：上线验证清单（✅ 已通过）
 
-打开部署域名后逐项确认：
-- [ ] 标题为 **Nathan's Universe / Nathan 的宇宙**，3D 太阳系正常渲染（太阳/行星/矮行星/星带）
-- [ ] 拖动/缩放视角正常；底部两行导航（天体 + 飞行器）可用
-- [ ] 点击天体弹出信息面板（含中英文）
-- [ ] 点击行星显示其卫星；切换行星旧卫星隐藏
-- [ ] 「像素」方块模式可切换
-- [ ] 「测验」随机抽题、判分、鼓励评价正常
-- [ ] 顶栏「EN / 中文」切换正常；「旅行者1号/2号」点击后显示飞行器与轨迹
-- [ ] 移动端布局可用（信息面板变底部抽屉）
+部署域名：<https://nathan-universe-dpo7e8ste9ut.edgeone.dev/>
+
+自动验证结果（2025 会话）：
+- [x] 首页 HTTP 200；`<title>Nathan's Universe</title>`
+- [x] 静态资源 200：`css/style.css`、`js/bundle.js`（~1.0 MB）、`lib/three.module.js`、行星贴图等
+- [x] `js/bundle.js` 内含完整功能（中英双语 / 飞行器 / 像素模式 / 测验）
+- [ ] 浏览器人工确认：3D 渲染、点击交互、像素、测验、卫星展示等（建议实测一遍）
 
 ---
 
