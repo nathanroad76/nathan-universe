@@ -78,6 +78,9 @@ python3 -m http.server 8000     # 浏览器访问 http://localhost:8000
 ```
 
 > 当前预览服务器已在此环境以 `python3 -m http.server 8000` 后台运行中。
+>
+> 🌐 **已上线**：默认域名 <https://nathan-universe-dpo7e8ste9ut.edgeone.dev/>，自定义域名 <https://nathan26.space/>（HTTPS 已开）。
+> 部署方案：GitHub + 腾讯云 EdgeOne Pages，改动推送后自动部署。详细步骤与「改动如何同步到线上」见 [DEPLOY.md](DEPLOY.md)。
 
 ---
 
